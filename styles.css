@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -234,8 +238,8 @@ h3 {
 @media (max-width: 860px) {
   .resume {
     grid-template-columns: 1fr;
-    width: min(680px, calc(100% - 24px));
-    margin: 12px auto;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .content {
@@ -253,7 +257,7 @@ h3 {
   }
 
   .content {
-    padding: 34px 22px;
+    padding: 34px 24px;
     min-width: 0;
   }
 
@@ -280,22 +284,24 @@ h3 {
   .resume {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    width: calc(100% - 32px);
-    max-width: 360px;
-    margin: 0;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
     overflow: hidden;
+    border: 0;
+    box-shadow: none;
   }
 
   .content {
     display: block;
     width: 100%;
     max-width: 100%;
-    padding: 28px 16px;
+    padding: 30px 24px;
     overflow: hidden;
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 34px;
     line-height: 1.02;
   }
 
@@ -310,7 +316,7 @@ h3 {
   }
 
   .block {
-    padding: 28px 0;
+    padding: 34px 0;
   }
 
   .block h2 {
@@ -359,17 +365,17 @@ h3 {
 
 @media (max-width: 360px) {
   .resume {
-    width: calc(100% - 44px);
-    max-width: 276px;
+    width: 100%;
+    max-width: none;
   }
 
   .content {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   h1 {
-    font-size: 27px;
+    font-size: 29px;
   }
 
   .label {
